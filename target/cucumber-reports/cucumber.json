@@ -3,11 +3,32 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-06-07T16:32:29.241Z",
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 71046700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am at amazon Home Page",
+            "match": {
+              "location": "step_definitions.SearchOnAmazon_StepDefinition.i_am_at_amazon_Home_Page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-07T18:25:40.634Z",
         "before": [
           {
             "result": {
-              "duration": 11332720200,
+              "duration": 14041902400,
               "status": "passed"
             },
             "match": {
@@ -15,18 +36,18 @@
             }
           }
         ],
-        "line": 7,
-        "name": "Search product",
+        "line": 24,
+        "name": "Search product using Parameter",
         "description": "",
-        "id": "search-product-on-amazon-searchbox;search-product",
+        "id": "search-product-on-amazon-searchbox;search-product-using-parameter",
         "after": [
           {
             "result": {
-              "duration": 1720259800,
+              "duration": 17914873500,
               "status": "passed"
             },
             "match": {
-              "location": "step_definitions.SearchOnAmazon_StepDefinition.closebrowser()"
+              "location": "step_definitions.SearchOnAmazon_StepDefinition.closeBrowser()"
             }
           }
         ],
@@ -35,34 +56,28 @@
         "steps": [
           {
             "result": {
-              "duration": 55482400,
+              "duration": 3857340500,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I am at amazon Home Page",
+            "line": 25,
+            "name": "I Enter \"Hand Sanitizer\" in search input field",
             "match": {
-              "location": "step_definitions.SearchOnAmazon_StepDefinition.i_am_at_amazon_Home_Page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 3546988100,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I Enter Hand Sanitizer in search input field",
-            "match": {
-              "location": "step_definitions.SearchOnAmazon_StepDefinition.i_Enter_Hand_Sanitizer_in_search_input_field()"
+              "arguments": [
+                {
+                  "val": "\"Hand Sanitizer\"",
+                  "offset": 8
+                }
+              ],
+              "location": "step_definitions.SearchOnAmazon_StepDefinition.i_Enter_in_search_input_field(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 5181271900,
+              "duration": 7571047900,
               "status": "passed"
             },
-            "line": 10,
+            "line": 26,
             "name": "I Click search button",
             "match": {
               "location": "step_definitions.SearchOnAmazon_StepDefinition.i_Click_search_button()"
@@ -71,15 +86,26 @@
           },
           {
             "result": {
-              "duration": 660135900,
+              "duration": 1592877800,
               "status": "passed"
             },
-            "line": 11,
-            "name": "I should see Hand Sanitizer",
+            "line": 27,
+            "name": "I should see \"\\\"Hand Sanitizer\\\"\"",
             "match": {
-              "location": "step_definitions.SearchOnAmazon_StepDefinition.i_should_see_Hand_Sanitizer()"
+              "arguments": [
+                {
+                  "val": "\"\\\"Hand Sanitizer\\\"\"",
+                  "offset": 13
+                }
+              ],
+              "location": "step_definitions.SearchOnAmazon_StepDefinition.i_should_see(java.lang.String)"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeTest"
           }
         ]
       }

@@ -86,6 +86,10 @@ public class HomePage extends WebAPI {
         Assert.assertEquals("Search Result not Displayed",expectedResult,actualResult);
 
     }
+    public void validateSearchProduct(List<String> expectedResult) {
+        String actualResult = searchValidText.getText();
+        Assert.assertEquals("Search Result not Displayed",expectedResult,actualResult);
 
+    }
 
 }

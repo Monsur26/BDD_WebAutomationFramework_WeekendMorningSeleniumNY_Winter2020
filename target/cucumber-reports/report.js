@@ -4,10 +4,10 @@ formatter.feature({
   "description": "  As a customer i want to search product on Amazon.com to purchase",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "Search product",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -22,12 +22,22 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Search product using Parameter",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@SmokeTest"
+    }
+  ]
+});
 formatter.step({
-  "name": "I Enter Hand Sanitizer in search input field",
+  "name": "I Enter \"Hand Sanitizer\" in search input field",
   "keyword": "And "
 });
 formatter.match({
-  "location": "step_definitions.SearchOnAmazon_StepDefinition.i_Enter_Hand_Sanitizer_in_search_input_field()"
+  "location": "step_definitions.SearchOnAmazon_StepDefinition.i_Enter_in_search_input_field(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -43,11 +53,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I should see Hand Sanitizer",
+  "name": "I should see \"\\\"Hand Sanitizer\\\"\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "step_definitions.SearchOnAmazon_StepDefinition.i_should_see_Hand_Sanitizer()"
+  "location": "step_definitions.SearchOnAmazon_StepDefinition.i_should_see(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
